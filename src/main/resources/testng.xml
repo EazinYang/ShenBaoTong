@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="政沣云UI自动化测试" verbose="1" parallel="tests" thread-count="3">
+    <test name="政策文库" >
+        <classes>
+            <class name="page.PolicyLibraryTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="通知详情" >
+        <classes>
+            <class name="page.PolicyDetailPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="政策详情" >
+        <classes>
+            <class name="page.PolicyFileDetailPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="公示详情" >
+        <classes>
+            <class name="page.NoticeDetailPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="登录注册" >
+        <classes>
+            <class name="page.LoginPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="注册" >
+        <classes>
+            <class name="page.RegisterPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="政策词典" >
+        <classes>
+            <class name="page.PolicyDictionaryPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="智能推送" >
+        <classes>
+            <class name="page.PushPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="项目匹配" >
+        <classes>
+            <class name="page.ProjectMatchPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="项目匹配记录" >
+        <classes>
+            <class name="page.ProjectMatchRecordPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="首页" >
+        <classes>
+            <class name="page.HomePageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="新闻中心" >
+        <classes>
+            <class name="page.NewsCenterTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="政策专题" >
+        <classes>
+            <class name="page.PolicySubjectPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="申报管家" >
+        <classes>
+            <class name="page.DeclareStewardPageTest" />
+        </classes>
+    </test><!--Test-->
+    <test name="未登录的状态" >
+        <classes>
+            <class name="page.NotLoginStatusTest" />
+        </classes>
+    </test><!--Test-->
+</suite><!--Suite-->
