@@ -42,8 +42,6 @@ public class PolicyDetailPageTest {
     public void enterPolicyDetailSuccess(){
         ArrayList<String> info=policyDetailPage.verficationDetailInfo();
         assertTrue(info.get(0).contains(config.policyname.get("title").get(0)));
-        System.out.println(info.get(1));
-        System.out.println(config.policyname.get("title").get(1));
         assertTrue(info.get(1).contains(config.policyname.get("title").get(1)));
         assertTrue(info.get(2).contains(config.policyname.get("title").get(2)));
         assertTrue(info.get(3).contains("申报通知"));
@@ -81,7 +79,6 @@ public class PolicyDetailPageTest {
             assertEquals(policyDetailPage.subscribe(pushPage,config.policyname.get("title").get(0)),"已订阅");
             assertEquals(policyDetailPage.tips,"操作成功");
             assertTrue(pushPage.titlesList.contains(policyDetailPage.titleText));
-            System.out.println(pushPage.titlesList.toString());
         }else if(policyDetailPage.subscribeText.contains("已订阅")){
             assertEquals(policyDetailPage.subscribe(pushPage,config.policyname.get("title").get(0)),"+ 订阅");
             assertEquals(policyDetailPage.tips,"操作成功");
@@ -95,12 +92,6 @@ public class PolicyDetailPageTest {
     @Description("正常测试用例：预览相关文件")
     @Story("申报通知详情页")
     public void readFile(){
-//        HashMap<String,String> map=policyDetailPage.readFile();
-//        System.out.println(map.toString());
-//        assertTrue(map.size()>=2);
-//        map.values().forEach(str -> {
-//            assertTrue(str.equals("文件预览"));
-//        });
         assertEquals(policyDetailPage.readFile(),"文件预览");
     }
 
@@ -148,9 +139,7 @@ public class PolicyDetailPageTest {
     @Story("申报通知详情页")
     public void contactInfoVerifySuccess(){
         ArrayList<String> info=policyDetailPage.contactInfoVerify();
-        System.out.println(info.toString());
         ArrayList<String> data=config.policyname.get("联系信息");
-        System.out.println(data.toString());
         assertEquals(info.get(0),"联系单位："+data.get(0));
         assertEquals(info.get(1),"联系人："+data.get(1));
         assertEquals(info.get(2),"联系电话："+data.get(2));

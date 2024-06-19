@@ -81,7 +81,6 @@ public class PolicyFileDetailPageTest {
     @Description("正常测试用例：订阅")
     @Story("政策文件详情页")
     public void subscribe() throws Exception {
-        System.out.println(policyFileDetailPage.subscribeText);
         if(policyFileDetailPage.subscribeText.contains("+ 订阅")){
             assertEquals(policyFileDetailPage.subscribe(pushPage,config.policyfilename.get("title").get(0)),"已订阅");
             assertEquals(policyFileDetailPage.tips,"操作成功");
@@ -100,9 +99,7 @@ public class PolicyFileDetailPageTest {
     @Story("政策文件详情页")
     public void contactInfoVerifySuccess(){
         ArrayList<String> info=policyFileDetailPage.contactInfoVerify();
-        System.out.println(info.toString());
         ArrayList<String> data=config.policyfilename.get("联系信息");
-        System.out.println(data.toString());
         assertEquals(info.get(0),"联系单位："+data.get(0));
         assertEquals(info.get(1),"联系人："+data.get(1));
         assertEquals(info.get(2),"联系电话："+data.get(2));

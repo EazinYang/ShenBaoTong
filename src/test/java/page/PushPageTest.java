@@ -71,7 +71,6 @@ public class PushPageTest {
     @Story("智能推送")
     public void endTimeSort(){
         ArrayList<String> list=pushPage.endTimeSort();
-        System.out.println(list.toString());
         for(int i=0;i<list.size()-1;i++){
             if(list.get(i+1).matches("\\d*") && list.get(i).matches("\\d*")){
                 assertTrue(Integer.parseInt(list.get(i))>=Integer.parseInt(list.get(i+1)));
@@ -207,7 +206,6 @@ public class PushPageTest {
     @Story("智能推送")
     public void searchMultiPolicyLevelSuccess(){
         ArrayList<String> titles= pushPage.searchMultiPolicyLevelSuccess(policyLibraryPage);
-        System.out.println(titles.toString());
         titles.forEach(string -> {
             assertTrue(pushPage.assertList.contains(string));
         });
@@ -218,11 +216,9 @@ public class PushPageTest {
     @Story("智能推送")
     public void searchKeywordAndPolicyLevelSuccess(){
         HashMap<String,ArrayList<String>> titles= pushPage.searchKeywordAndPolicyLevelSuccess("技术",policyLibraryPage);
-        System.out.println(titles.toString());
         titles.get("政策标题").forEach(string -> {
             assertTrue(string.contains("技术"));
         });
-        System.out.println(pushPage.assertList.toString());
         titles.get("主管部门").forEach(string -> {
             assertTrue(pushPage.assertList.contains(string));
         });
@@ -241,7 +237,6 @@ public class PushPageTest {
     @Story("智能推送")
     public void attentionSkipProjectDetailSuccess(){
         String title= pushPage.attentionSkipProjectDetail(policyFileDetailPage,"技术");
-        System.out.println(title);
         assertEquals(title,pushPage.assertText);
     }
 

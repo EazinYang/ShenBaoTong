@@ -49,11 +49,7 @@ public class PolicyLibraryTest {
     @Story("政策文库")
     public void defaultSearchSuccess(){
         ArrayList<String> departmentList=policyLibrary.defaultSearch();
-        for(String str:policyLibrary.departmentList){
-            System.out.println(str);
-        }
         for(String str:departmentList){
-            System.out.println("："+str);
             assertTrue(policyLibrary.departmentList.contains(str));
         }
     }
@@ -73,9 +69,7 @@ public class PolicyLibraryTest {
     @Story("政策文库")
     public void countryDepartmentSearch(){
         ArrayList<String> assertTextList=policyLibrary.searchCountryDepartment();
-        System.out.println(policyLibrary.assertText);
         for(String str:assertTextList){
-            System.out.println(str);
             assertTrue(str.equals(policyLibrary.assertText));
         }
     }
@@ -86,7 +80,6 @@ public class PolicyLibraryTest {
     public void provinceSearch(){
         ArrayList<String> departmentList=policyLibrary.searchProvince();
         for(String str:departmentList){
-            System.out.println(str);
             assertTrue(policyLibrary.departmentList.contains(str));
         }
     }
@@ -157,7 +150,6 @@ public class PolicyLibraryTest {
     public void projectTitleSearchSuccess(){
         String projectTitle="疫情防控省工程中心" ;
         policyLibrary.searchProjectTitleSuccess(projectTitle).forEach(title->{
-            System.out.println(title);
             assertTrue(title.contains("疫情"));
             assertTrue(title.contains("防控"));
             assertTrue(title.contains("省"));
@@ -180,10 +172,8 @@ public class PolicyLibraryTest {
     public void applySearch(){
         HashMap<Integer,ArrayList<String>> map=policyLibrary.searchApply();
         Boolean start=false;
-        System.out.println(map.toString());
         for(ArrayList<String> str:map.values()){
             for(String text:str){
-                System.out.println(str);
                 if(text.matches("【剩\\d*天】") || text.matches("【今天截止】")){
                     start=true;
                     break;
@@ -221,7 +211,6 @@ public class PolicyLibraryTest {
     @Story("政策文库")
     public void searchSupportOne(){
         HashMap<Integer,ArrayList<String>> map=policyLibrary.searchOneSupport();
-        System.out.println(policyLibrary.assertText);
         Boolean start=false;
         for(ArrayList<String> str:map.values()){
             if(str.contains(policyLibrary.assertText)){
@@ -239,10 +228,8 @@ public class PolicyLibraryTest {
     @Story("政策文库")
     public void searchSupportAll(){
         HashMap<Integer,ArrayList<String>> map=policyLibrary.searchAllSupport();
-        System.out.println(map.toString());
         Boolean start=false;
         for(ArrayList<String> str:map.values()){
-            System.out.println("："+str.toString());
             if(str.containsAll(policyLibrary.assertTextList)){
                 start=true;
                 break;
@@ -311,10 +298,8 @@ public class PolicyLibraryTest {
     @Story("政策文库")
     public void policyFileSearchSuccess(){
         ArrayList<String> list=policyLibrary.searchPolicyFileTitleSuccess();
-        System.out.println(policyLibrary.assertText);
         Boolean start=false;
         for(String str:list){
-            System.out.println(str);
             if(str.contains(policyLibrary.assertText)){
                 start=true;
             }else {
@@ -339,10 +324,8 @@ public class PolicyLibraryTest {
     @Story("政策文库")
     public void noticeSearchSuccess(){
         ArrayList<String> list=policyLibrary.searchNoticeSuccess();
-        System.out.println(policyLibrary.assertText);
         Boolean start=false;
         for(String str:list){
-            System.out.println(str);
             if(str.contains(policyLibrary.assertText)){
                 start=true;
             }else {

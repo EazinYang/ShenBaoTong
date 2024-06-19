@@ -140,7 +140,6 @@ public class ProjectMatchPage extends Method {
     //排序：按发文日期排序
     public ArrayList<String> publishTimeSort(){
         ArrayList<String> startList = sort(listProjectTitles,publishTimeOption);
-        System.out.println(startList.toString());
         while (true){
             ArrayList<String> endList=new ArrayList<>();
             finds(listProjectTitles).forEach(webElement -> {

@@ -153,10 +153,7 @@ public class PolicyLibraryPage extends Method {
     //获取title字段并存储
     public void getTitles(ArrayList<String> list, By by,By updateText,String text){
         list.clear();
-        System.out.println(polictyAll);
-        System.out.println(find(fileType).getText());
         waitNoText(updateText,text);
-        System.out.println(find(fileType).getText());
         finds(by).forEach((webElement -> {
             list.add(webElement.getText());
         }));
@@ -247,7 +244,6 @@ public class PolicyLibraryPage extends Method {
         //项目标题父级元素
         String xpath1="//*[@class='noticeList']/div";
         int xpathNum1=finds(xpathOrId(xpath1)).size();
-        System.out.println(xpathNum1);
         HashMap<Integer,ArrayList<String>> status=new HashMap<>();
 
         for(int i=1;i<=xpathNum1;i++){
@@ -329,9 +325,6 @@ public class PolicyLibraryPage extends Method {
         selectLocation(by);
         getTitles(departmentList,filterDepartmentXpathAll,fileType,polictyAll);
         departmentList.remove("不限");
-        for(String str:departmentList){
-            System.out.println(str);
-        }
         getTitles(assertTextList,sponseTitles,fileType,polictyAll);
         find(filterLocationAll).click();
     }

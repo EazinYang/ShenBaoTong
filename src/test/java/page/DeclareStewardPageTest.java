@@ -110,7 +110,6 @@ public class DeclareStewardPageTest {
     @Story("申报管家")
     public void twoLevelClasifySearchSuccess(){
         ArrayList<String> list=declareStewardPage.twoLevelClasifySearchSuccess();
-        System.out.println(list.toString());
         assertTrue(!list.contains("增值税申报表"));
         assertTrue(list.contains("财务审计报告"));
     }

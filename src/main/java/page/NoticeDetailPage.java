@@ -40,7 +40,6 @@ public class NoticeDetailPage extends PolicyDetailPage{
     public String share(){
         mouseMoveToElement(shareBtn);
         id=getDriver().getCurrentUrl().replaceAll("\\D","");
-        System.out.println(id);
         return find(shareId).getAttribute("title").replaceAll("\\D","");
     }
 

@@ -99,7 +99,6 @@ public class NoticeDetailPageTest {
     @Story("公示公告详情页")
     public void policyFileSkipProjectDetailSuccess(){
         ArrayList<String> list=noticeDetailPage.policyFileSkipProjectDetail(policyDetailPage,config.noticename.get("title").get(0));
-        System.out.println(list.toString());
         assertEquals(list.get(0),config.project1.get(0));
         assertEquals(list.get(1),config.project1.get(0));
     }
@@ -108,12 +107,6 @@ public class NoticeDetailPageTest {
     @Description("正常测试用例：预览相关文件")
     @Story("公示公告详情页")
     public void readFile(){
-//        HashMap<String,String> map=noticeDetailPage.readFile();
-//        System.out.println(map.toString());
-//        assertTrue(map.size()>=2);
-//        map.values().forEach(str -> {
-//            assertTrue(str.equals("文件预览"));
-//        });
         assertEquals(noticeDetailPage.readFile(),"文件预览");
     }
 }
