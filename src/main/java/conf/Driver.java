@@ -10,8 +10,8 @@ public class Driver {
     public static ThreadLocal<WebDriver> threadLocal=new ThreadLocal<>();
 
     public static void start(){
-//        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "chromedriver");
         Config config=Config.load("/config.yaml");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--incognitio");
