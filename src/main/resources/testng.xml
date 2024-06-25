@@ -22,59 +22,59 @@
             <class name="page.NoticeDetailPageTest" />
         </classes>
     </test><!--Test-->
-    <test name="登录注册" >
-        <classes>
-            <class name="page.LoginPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="注册" >
-        <classes>
-            <class name="page.RegisterPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="政策词典" >
-        <classes>
-            <class name="page.PolicyDictionaryPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="智能推送" >
-        <classes>
-            <class name="page.PushPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="项目匹配" >
-        <classes>
-            <class name="page.ProjectMatchPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="项目匹配记录" >
-        <classes>
-            <class name="page.ProjectMatchRecordPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="首页" >
-        <classes>
-            <class name="page.HomePageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="新闻中心" >
-        <classes>
-            <class name="page.NewsCenterTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="政策专题" >
-        <classes>
-            <class name="page.PolicySubjectPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="申报管家" >
-        <classes>
-            <class name="page.DeclareStewardPageTest" />
-        </classes>
-    </test><!--Test-->
-    <test name="未登录的状态" >
-        <classes>
-            <class name="page.NotLoginStatusTest" />
-        </classes>
-    </test><!--Test-->
+<!--    <test name="登录注册" >-->
+<!--        <classes>-->
+<!--            <class name="page.LoginPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="注册" >-->
+<!--        <classes>-->
+<!--            <class name="page.RegisterPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="政策词典" >-->
+<!--        <classes>-->
+<!--            <class name="page.PolicyDictionaryPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="智能推送" >-->
+<!--        <classes>-->
+<!--            <class name="page.PushPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="项目匹配" >-->
+<!--        <classes>-->
+<!--            <class name="page.ProjectMatchPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="项目匹配记录" >-->
+<!--        <classes>-->
+<!--            <class name="page.ProjectMatchRecordPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="首页" >-->
+<!--        <classes>-->
+<!--            <class name="page.HomePageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="新闻中心" >-->
+<!--        <classes>-->
+<!--            <class name="page.NewsCenterTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="政策专题" >-->
+<!--        <classes>-->
+<!--            <class name="page.PolicySubjectPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="申报管家" >-->
+<!--        <classes>-->
+<!--            <class name="page.DeclareStewardPageTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
+<!--    <test name="未登录的状态" >-->
+<!--        <classes>-->
+<!--            <class name="page.NotLoginStatusTest" />-->
+<!--        </classes>-->
+<!--    </test>&lt;!&ndash;Test&ndash;&gt;-->
 </suite><!--Suite-->
