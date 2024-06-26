@@ -64,12 +64,14 @@ public class PolicyLibraryTest {
         }
     }
 
-    @Test(priority = 1,retryAnalyzer = RetryUtils.class)
+    @Test(priority = 5,retryAnalyzer = RetryUtils.class)
     @Description("正常测试用例：搜索选择区域：国家级，主管部门为第一个部门")
     @Story("政策文库")
     public void countryDepartmentSearch(){
         ArrayList<String> assertTextList=policyLibrary.searchCountryDepartment();
         for(String str:assertTextList){
+            System.out.println(policyLibrary.assertText);
+            System.out.println("："+assertTextList.toString());
             assertTrue(str.equals(policyLibrary.assertText));
         }
     }
@@ -240,7 +242,7 @@ public class PolicyLibraryTest {
         }
         assertTrue(start);
     }
-
+//-----------------------
 //    @Test(priority = 1)
 //    @Description("正常测试用例：发文日期排序：升序")
 //    @Story("政策文库")
@@ -292,7 +294,7 @@ public class PolicyLibraryTest {
 //        }
 //        assertTrue(start);
 //    }
-
+//---------------------------
     @Test(priority = 5,retryAnalyzer = RetryUtils.class)
     @Description("正常测试用例：搜索政策文件关键字")
     @Story("政策文库")

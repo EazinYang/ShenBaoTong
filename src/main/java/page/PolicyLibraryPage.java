@@ -153,7 +153,12 @@ public class PolicyLibraryPage extends Method {
     //获取title字段并存储
     public void getTitles(ArrayList<String> list, By by,By updateText,String text){
         list.clear();
-        waitNoText(updateText,text);
+//        waitNoText(updateText,text);
+        try {
+            Thread.sleep(2000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         finds(by).forEach((webElement -> {
             list.add(webElement.getText());
         }));
@@ -188,6 +193,11 @@ public class PolicyLibraryPage extends Method {
         find(searchBtn).click();
         waitUrl("keyWord=&");
         find(filterLocationAll).click();
+        try {
+            Thread.sleep(2000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return assertTextList;
     }
 
@@ -286,6 +296,12 @@ public class PolicyLibraryPage extends Method {
     //【申报通知】筛选：选择区域：省级，主管部门：选择搜索第一个部门
     public ArrayList<String> searchProvinceDepartment(){
 //        find(filterLocationAll).click();
+        getDriver().navigate().refresh();
+        try {
+            Thread.sleep(2000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         departmentSearch(filterLocationProvince);
         return assertTextList;
     }
@@ -461,6 +477,7 @@ public class PolicyLibraryPage extends Method {
         find(filterTitleTextInput).sendKeys(Keys.CONTROL,"a");
         find(filterTitleTextInput).sendKeys(Keys.BACK_SPACE);
         find(pageTitle).click();
+        find(searchBtn).click();
         find(fileType).click();
         wait(multipleSelect);
         return text;
