@@ -69,7 +69,6 @@ public class PolicyDetailPageTest {
                 {}
         };
     }
-    //retryAnalyzer = RetryUtils.class
 
     @Test(dataProvider = "订阅",priority = 3)
     @Description("正常测试用例：订阅")

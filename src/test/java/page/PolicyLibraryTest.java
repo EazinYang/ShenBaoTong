@@ -70,8 +70,6 @@ public class PolicyLibraryTest {
     public void countryDepartmentSearch(){
         ArrayList<String> assertTextList=policyLibrary.searchCountryDepartment();
         for(String str:assertTextList){
-            System.out.println(policyLibrary.assertText);
-            System.out.println("："+assertTextList.toString());
             assertTrue(str.equals(policyLibrary.assertText));
         }
     }

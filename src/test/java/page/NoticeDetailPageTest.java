@@ -55,7 +55,7 @@ public class NoticeDetailPageTest {
     @Description("正常测试用例：回到列表页面")
     @Story("公示公告详情页")
     public void retuenList(){
-        assertEquals(policyDetailPage.returnList().getPageText(),"政策搜索");
+        assertEquals(noticeDetailPage.returnList().getPageText(),"政策搜索");
         policyLibraryPage.enterNoticeDeatil("测试数据-公告公示");
     }
 

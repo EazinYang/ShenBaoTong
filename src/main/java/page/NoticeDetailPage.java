@@ -21,6 +21,8 @@ public class NoticeDetailPage extends PolicyDetailPage{
     public static By projectTitle=xpathOrId("//div[@class='zhengce_area']/div[3]/div/div/div");
     //相关文件tab
     public static By fileTab=xpathOrId("//div[@class='el-row']/div/ul/li[5]/a");
+    //返回上一级
+    public By returnBtn=xpathOrId("//*[@class='content']/div[2]/div[2]/button");
 
     public String getTitle() {
         return find(title).getText();
@@ -73,6 +75,17 @@ public class NoticeDetailPage extends PolicyDetailPage{
         policyLibraryPage.enterpolicyLibrary();
         policyLibraryPage.enterNoticeDeatil(title);
         return assertText;
+    }
+
+    //返回列表页
+    public PolicyLibraryPage returnList(){
+        try{
+            Thread.sleep(1000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        jsClick(returnBtn);
+        return new PolicyLibraryPage();
     }
 
     //政策文件tab：跳转项目摘要页

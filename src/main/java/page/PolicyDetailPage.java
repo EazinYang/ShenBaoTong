@@ -102,7 +102,12 @@ public class PolicyDetailPage extends Method {
 
     //返回列表页
     public PolicyLibraryPage returnList(){
-        find(returnBtn).click();
+        try{
+            Thread.sleep(1000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        jsClick(returnBtn);
         return new PolicyLibraryPage();
     }
 
